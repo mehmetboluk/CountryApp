@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="selectedCountry"
+            type="com.example.countryapp.model.Country" />
+
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CountryFragment">
+
+    <ImageView
+        android:id="@+id/ivCountryFlagAtCountryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:downloadUrl="@{selectedCountry.imageURL}"
+        android:paddingTop="10dp"
+        android:scaleType="fitCenter"
+        android:minHeight="200dp"/>
+
+    <TextView
+        android:id="@+id/tvCountryNameAtCountryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCountryFlagAtCountryFragment"
+        android:text="@{selectedCountry.countryName}"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"/>
+
+    <TextView
+        android:id="@+id/tvCountryCapitalAtCountryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCountryNameAtCountryFragment"
+        android:text="@{selectedCountry.capital}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/tvCountryRegionAtCountryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCountryCapitalAtCountryFragment"
+        android:text="@{selectedCountry.region}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/tvCountryCurrencyAtCountryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCountryRegionAtCountryFragment"
+        android:text="@{selectedCountry.currency}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/tvCountryLangAtCountryFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCountryCurrencyAtCountryFragment"
+        android:text="@{selectedCountry.language}"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"/>
+
+
+
+
+</RelativeLayout>
+</layout>
